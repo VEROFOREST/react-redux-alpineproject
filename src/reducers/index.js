@@ -1,37 +1,39 @@
-// import id from '../reducers/index'
+import legende from '../images/configurateur/modele/selection/legende.png';
+import pure from '../images/configurateur/modele/selection/pure.png';
 
 
-// const initialState = {
+
+const initialState = {
 //   //TODO : complete players {} and monster{}
-//   players: {
-//     1: { name: "John", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 1 },
-//     2: { name: "Jack", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 2 },
-//     3: { name: "Jessy", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 3 },
-//     4: { name: "Jenny", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 4 }},
+  version: {
+    1: { name: "legende", px: 58500, img:{legende}, id: 1 },
+    2: { name: "pure", px: 54700, img:{pure}, id: 2 }}
 
 //   monster: {
 //     pv: 10,
 //     pvMax: 300
 //   },
 //   hasPlayed : []
-  
+}; 
 
-//   };
+
  
-// function rootReducer(state = initialState, action) {
+function rootReducer(state = initialState, action) {
   
-//   if (action.type === "HIT_MONSTER") {
-//     let currentPlayer=[action.payload]
+//   if (action.type === "CHOICE_TYPE") {
+//     // let currentPlayer=[action.payload]
     
     
 //         return {...state,
-//         hasPlayed: state.hasPlayed.concat(currentPlayer),
-//          monster: {...state.monster, pv: state.monster.pv-5}}
+        
+//          version: {...state.version, 
+//                 [action.payload]: {...state.version [action.payload],
+//                 pv: state.version.pv-5}}
    
-//     }
+//         }
 
       
-
+  }
 //   if (action.type === "HIT_BACK") {
     
 //     return {...state, 
@@ -44,7 +46,7 @@
 //   return state;
  
 
-// };
+
 
  
-// export default rootReducer;
+export default rootReducer;
