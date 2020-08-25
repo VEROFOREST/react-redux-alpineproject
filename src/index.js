@@ -9,11 +9,22 @@ import NavComponent from '../src/components/nav';
 
 
 import store from "./store/index.js";
+import FooterComponent from './components/footer';
+import Jantes from "./components/jantes";
+import Sellerie from './components/sellerie';
+import Equipements from './components/equipements';
+import Accessoires from './components/accessoires';
+
 
 
 ReactDOM.render (<Provider store={store}>
                 <NavComponent/>
                 <Version/>
+                <FooterComponent/>
+                <Jantes/>
+                <Sellerie/>
+                <Equipements/>
+                <Accessoires/>
                 </Provider>, document.getElementById('root'));
          
 

@@ -15,9 +15,9 @@ const BoutonCarousel = () => {
 
     
     return (
-        
+        <div className="container">
      <Carousel>
-        <Carousel.Item>
+        <Carousel.Item >
            <img
             className="d-block w-100"
              src={legende} 
@@ -38,7 +38,7 @@ const BoutonCarousel = () => {
         </Carousel.Item>
        
         </Carousel>
-
+        </div>
     )
     
 
