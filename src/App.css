@@ -190,16 +190,137 @@ body{
   font-family:inherit;
   line-height:1.15;
 }
-.card-deck{
-  
-  background-color: #777;
+/* -----------------------------------------------------FIN-FOOTER---------------------------------------------------------- */
+
+/* -----------------------------------------------------DEBUT--NAV---------------------------------------------------------- */
+.box{
+  margin:0;
+  padding:0;
+  display: flex;
+  width:100%;
 }
-.card-deck .card{
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-right: 15px;
+
+.menuFilariane{
+  flex: 1 20 auto;
+  margin: 0;
+  padding: 0;
+  padding-top: 10%;
+  padding-bottom: 16%;
+  border: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color:#0843a6;
+  width:28%;
+
+
+}
+
+
+.menuFilarianeUl{
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  vertical-align: center;
+
+
+}
+
+#cercle {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  border: 2px solid white;
+  box-sizing: border-box;
+
+}
+
+#line {
+  width: 0px;
+  height: 43px;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  margin-left:9.5px;
+  margin-top:21px;
+
+}
+
+.menuFilarianeImg{
+  padding-bottom:80px;
+  padding-top:0px;
+
+}
+
+.menuFilarianeLi{
+  position: relative;
+  padding: 16px 0;
+  display: inline;
+}
+
+.menuBoutonFilariane{
+  position: relative;
+  display: inline-block;
+  padding: 8px 42px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-style: italic;
+  color: white;
+  border: 0;
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 0;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0 30px;
+
+}
+
+.menuBoutonFilariane_content{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-style: italic;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.15;
+  text-align: left;
+  list-style: none;
+  visibility: visible;
+}
+
+
+/* -----------------------------------------------------FIN--NAV---------------------------------------------------------- */
+
+/* -----------------------------------------------------DEBUT--CAROUSEL---------------------------------------------------------- */
+
+/* -----------------------------------------------------FIN--CAROUSEL---------------------------------------------------------- */
+
+/* -----------------------------------------------------DEBUT--boutonCard---------------------------------------------------------- */
+
+.card-deck{
+
+  background-color: rgba(119, 119, 119, 0.8);
+  padding-bottom:10px;
+  display:flex;
+  justify-content:center;
+ 
 }
 .card {
- 
-  height: 10%;
+  border: 1px solid white;
+  background:transparent;
+  transform:skew(-18deg);
+  margin-top:-15px;
+  width:200px;
+  position:relative;
+  box-sizing: border-box;
+
 }
+
+/* -----------------------------------------------------FIN--boutonCard---------------------------------------------------------- */

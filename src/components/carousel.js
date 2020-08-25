@@ -1,6 +1,7 @@
 
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
+import NavComponent from './nav';
 import legende from '../images/configurateur/modele/selection/legende.png'
 import pure from '../images/configurateur/modele/selection/pure.png'
 
@@ -15,16 +16,16 @@ const CarouselComponent = () => {
 
     
     return (
-        
-     <Carousel>
-        <Carousel.Item >
+        <div className="box">
+     <Carousel className="carousel">
+        <Carousel.Item>
            <img
             className="d-block w-100"
              src={legende} 
             alt="First slide"
             />
             <Carousel.Caption>
-            
+
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -34,11 +35,12 @@ const CarouselComponent = () => {
             alt="Third slide"
             />
 
-            
-        </Carousel.Item>
-       
-        </Carousel>
 
+        </Carousel.Item>
+
+        </Carousel>
+        <NavComponent/>
+    </div>
     )
     
 

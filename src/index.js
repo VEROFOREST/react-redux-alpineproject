@@ -1,32 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Version from './components/version'
+
 import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavComponent from '../src/components/nav';
-
-
 import store from "./store/index.js";
-import FooterComponent from './components/footer';
-import Jantes from "./components/jantes";
-import Sellerie from './components/sellerie';
-import Equipements from './components/equipements';
-import Accessoires from './components/accessoires';
+
+import App from './App';
+
+ReactDOM.render( <Provider store={store}>
+    
+    <App/>
+    
+   </Provider>, document.getElementById("root")
+);
 
 
 
-ReactDOM.render (<Provider store={store}>
-                <NavComponent/>
-                <Version/>
-                <FooterComponent/>
-                <Jantes/>
-                <Sellerie/>
-                <Equipements/>
-                <Accessoires/>
-                </Provider>, document.getElementById('root'));
-         
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

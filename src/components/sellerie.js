@@ -7,21 +7,30 @@ import FooterComponent from './footer';
 
 import CarouselComponent from './carousel';
 import BoutonCard from './boutonCard';
+import { Button } from 'react-bootstrap';
 
 
 const Sellerie = ()=> {
 
 return (
     <div>
-    < NavComponent/>
-    <div className="container fluid">
+    
+    
      <h2>SELLERIE</h2>
     <CarouselComponent/>
     
-    </div>
+    
      <BoutonCard/>
     
-    <FooterComponent/>
+    <div className="footer">
+          <FooterComponent/>
+          <Button className="footer_boutonOption" href="./equipements">
+              <div className="footer_boutonContent">
+              <span className="footer_boutonContentSpan">Option suivante: Equipements</span>
+              </div>
+          </Button>
+
+        </div>
     </div>
 )
 

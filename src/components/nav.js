@@ -1,8 +1,6 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar'
-import NavDropdown from 'react-bootstrap/NavDropdown'
-import logowhite from '../images/sources-homepage/logo/logo-white.png'
+import logo from '../images/sources-homepage/logo/logo-white.png';
+
 
 
 
@@ -10,23 +8,53 @@ const NavComponent = () => {
 
 
 return(
-  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="#home"><img src={logowhite}/></Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mr-auto">
-  
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-    
-  </Navbar.Collapse>
-</Navbar>
+
+    <div className="menuFilariane">
+        <ul className="menuFilarianeUl">
+          <img className="menuFilarianeImg" src={logo} alt=""/>
+
+          <li className="menuFilarianeLi">
+            <div id="cercle"><div id="line"></div> </div> 
+            <button className="menuBoutonFilariane">
+            <div className="menuBoutonFilariane_content">1/ Version</div>
+            </button>
+          </li>
+          <li className="menuFilarianeLi">
+            <div id="cercle"><div id="line"></div></div> 
+            <button className="menuBoutonFilariane">
+              <div className="menuBoutonFilariane_content">2/ Couleur</div>
+            </button>
+          </li>
+          <li className="menuFilarianeLi">
+            <div id="cercle"><div id="line"></div></div> 
+            <button className="menuBoutonFilariane">
+              <div className="menuBoutonFilariane_content">3/ Jantes</div>
+            </button>
+          </li>
+          <li className="menuFilarianeLi">
+            <div id="cercle"><div id="line"></div></div> 
+            <button className="menuBoutonFilariane">
+              <div className="menuBoutonFilariane_content">4/ Sellerie</div>
+            </button>
+          </li>
+          <li className="menuFilarianeLi">
+            <div id="cercle"><div id="line"></div></div> 
+            <button className="menuBoutonFilariane">
+              <div className="menuBoutonFilariane_content">5/ Equipements</div>
+            </button>
+          </li>
+          <li className="menuFilarianeLi">
+            <div id="cercle"><div id="line"></div></div> 
+            <button className="menuBoutonFilariane">
+              <div className="menuBoutonFilariane_content">6/ Accessoires</div>
+            </button>
+          </li>
+        </ul>
+
+    </div>
+
+
+
 );
 
 }
