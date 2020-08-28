@@ -1,16 +1,17 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 
 
 
 
 
 const BoutonCard = (props) => {
+    const version = useSelector ((state)=>state.version)
     const dispatch = useDispatch();
 
     const choiceColor = () => {
-        dispatch({type:"CHOICE_COLOR", color : props.string, version: props.version});
+        dispatch({type:"CHOICE_COLOR", color : props.string, version:props.nameVersion});
     }
     console.log (props.string)
 

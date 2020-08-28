@@ -7,15 +7,16 @@ import FooterComponent from './footer';
 import { Button } from 'react-bootstrap';
 import CarouselComponent from './carousel';
 
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
+
 import {useSelector} from 'react-redux'
+import JantesList from './jantesList';
 
 
 
 
 
 const Jantes = (props)=> {
+    
     const  jantes= useSelector((state)=> state.jantes)   
   
  const displayJantes = () => {
@@ -23,18 +24,7 @@ const Jantes = (props)=> {
         return Object.keys(jantes).map(key => (
            
              
-                <Card >
-                    <button>
-                    <Card.Img variant="top" src={jantes[key].imgCard} alt=""/>
-                    <Card.Body>
-                    <Card.Title>{jantes[key].name}</Card.Title>
-                    <Card.Text>
-                        {jantes[key].px} €
-                    </Card.Text>
-                    </Card.Body>
-                    </button>
-                </Card>
-            
+                <JantesList key={jantes[key].id} jantes={jantes[key].imgCard } name={jantes[key].name} px={jantes[key].px}/>
 
           
             

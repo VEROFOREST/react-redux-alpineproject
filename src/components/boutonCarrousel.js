@@ -4,12 +4,15 @@ import {Carousel,Button} from 'react-bootstrap';
 import NavComponent from './nav';
 import {useSelector, useDispatch} from 'react-redux'
 import { Link } from 'react-router-dom';
+import BoutonCard from './boutonCard';
+import Couleurs from './couleurs';
 
 const BoutonCarousel = (props) => {
    const  versions= useSelector((state)=> state.version)
    const dispatch = useDispatch();
     const choiceVersion = () => {
         dispatch({type:"CHOICE_VERSION", version: props.name});
+       
     }
     
     
@@ -18,7 +21,7 @@ const BoutonCarousel = (props) => {
                 
            <div className="row">
                
-                <Button  onClick={()=>choiceVersion()}  variant="link" className="version">
+                <Button onClick={()=>choiceVersion()}  variant="link" className="version">
                 <img
                     className="d-block w-100 m-50"
                     src={props.version} 
@@ -26,7 +29,9 @@ const BoutonCarousel = (props) => {
                 />
                 
                 </Button>
+                
             </div>
+           
             <div>   
                   <h3 >{props.name}</h3>
                   <h4 >{props.px} €</h4>

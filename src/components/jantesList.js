@@ -1,26 +1,37 @@
 import React from 'react';
 import Jantes from './jantes';
-import {useSelector} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
+import { Card } from 'react-bootstrap';
 
 
-const JantesList = () => {
+const JantesList = (props) => {
 
+   const dispatch = useDispatch();
+
+    const choiceJantes = () => {
+        dispatch({type:"CHOICE_JANTES", jantes : props.name});
+    }
    
-    const  jantes= useSelector((state)=> state.jantes)
     
   
 
-    const displayJantes = () => {
-        
-        return Object.keys(jantes).map(key => (
-        <Jantes key={jantes[key].id} jante={jantes[key]} />
-        ));
-        }
+    
     
     return (
-      <div className='row' >
-        {displayJantes()}
-      </div>
+      
+        <Card >
+                    <button  onClick={() => choiceJantes()}>
+                    <Card.Img variant="top" src={props.jantes} alt=""/>
+                    <Card.Body>
+                    <Card.Title>{props.name}</Card.Title>
+                    <Card.Text>
+                        {props.px} €
+                    </Card.Text>
+                    </Card.Body>
+                    </button>
+                </Card>
+            
+     
     );
 }
 

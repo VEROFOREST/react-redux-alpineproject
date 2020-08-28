@@ -39,11 +39,11 @@ const Equipements = ()=> {
 return (
     <div>
     
-    <div className="container fluid">
+   
         <h2>EQUIPEMENTS</h2>
     <CarouselComponent/>
     
-    </div>
+    
      <div  className="card-deck">
           
         <div className="row">

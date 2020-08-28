@@ -81,6 +81,7 @@ import pedalAlu from '../images/configurateur/equipements/categories/personnalis
 import  carbone from '../images/configurateur/equipements/categories/personnalisation interieure/pack-carbone.jpg'                      
 import  logoVolant from '../images/configurateur/equipements/categories/personnalisation interieure/logo-volant.jpg'                 
 import siegeChauffant from '../images/configurateur/equipements/categories/personnalisation interieure/siege-chauffant.jpg'             
+import { version } from 'react';
 
 
 const initialState = {
@@ -143,9 +144,21 @@ const initialState = {
       '/images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (4).jpg',
 
     ],
-    imagesBlanchesJantesStandard:[
-      '/images/configurateur/jantes/vues/couleur-blanc_jante-standard (2).jpg'
+    jantesSerac:[
+   '/images/configurateur/jantes/vues/couleur-noir_jante-serac (1).jpg',
+       '/images/configurateur/jantes/vues/couleur-blanc_jante-serac (2).jpg',
+  '/images/configurateur/jantes/vues/couleur-bleu_jante-serac (3).jpg',
 
+    ],
+    jantesStandard:[
+   '/images/configurateur/jantes/vues/couleur-noir_jante-standard (1).jpg',
+        '/images/configurateur/jantes/vues/couleur-blanc_jante-standard (2).jpg',
+   '/images/configurateur/jantes/vues/couleur-bleu_jante-standard (3).jpg',
+    ],
+    jantesLegende:[
+        '/images/configurateur/jantes/vues/couleur-noir_jante-legende (1).jpg',
+        '/images/configurateur/jantes/vues/couleur-blanc_jante-legende (2).jpg',
+      '/images/configurateur/jantes/vues/couleur-bleu_jante-legende (3).jpg',
     ],
     price :[],
 
@@ -247,10 +260,10 @@ function rootReducer(state = initialState, action) {
       }
   }
   
-   if (action.type === "CHOICE_COLOR"){
+   if (action.type === "CHOICE_COLOR" ){
      
     
-    if (action.color === "noir" ){
+    if (action.color === "noir"  ){
     
         return {...state,
           carouselImages: state.imagesNoiresLegende
@@ -269,6 +282,30 @@ function rootReducer(state = initialState, action) {
     }
     }
 
+  }
+   if (action.type === "CHOICE_JANTES"){
+        if (action.jantes === "legende"){
+          return {
+            ...state,
+            carouselImages: state.jantesLegende,
+           
+          }
+          
+        }
+      if (action.jantes === "serac"){
+        return {
+          ...state,
+          carouselImages: state.jantesSerac
+
+        }
+      }
+       if (action.jantes === "standard"){
+        return {
+          ...state,
+          carouselImages: state.jantesStandard
+
+        }
+      }
   }
 return state 
 }
