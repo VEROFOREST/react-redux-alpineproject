@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../images/sources-homepage/logo/logo-white.png';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -15,15 +16,15 @@ return(
 
           <li className="menuFilarianeLi">
             <div id="cercle"><div id="line"></div> </div> 
-            <button className="menuBoutonFilariane">
+            <Button href="./" className="menuBoutonFilariane">
             <div className="menuBoutonFilariane_content">1/ Version</div>
-            </button>
+            </Button>
           </li>
           <li className="menuFilarianeLi">
             <div id="cercle"><div id="line"></div></div> 
-            <button className="menuBoutonFilariane">
+            <Button href="./couleurs" className="menuBoutonFilariane">
               <div className="menuBoutonFilariane_content">2/ Couleur</div>
-            </button>
+            </Button>
           </li>
           <li className="menuFilarianeLi">
             <div id="cercle"><div id="line"></div></div> 

@@ -6,11 +6,35 @@ import FooterComponent from './footer';
 
 
 import CarouselComponent from './carousel';
-import BoutonCard from './boutonCard';
-import { Button } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
+
+import { Button, Card } from 'react-bootstrap';
 
 
 const Equipements = ()=> {
+
+    const equipements =useSelector(state => state.equipements)
+    const displayequipements = () => {
+        
+        
+        return Object.keys(equipements).map(key => (
+           
+             
+                <Card >
+                    <button>
+                    <Card.Img variant="top" src={equipements[key].imgCard} alt=""/>
+                    <Card.Body>
+                    <Card.Title>{equipements[key].name}</Card.Title>
+                    
+                    </Card.Body>
+                    </button>
+                </Card>
+            
+
+          
+            
+               ));
+        }
 
 return (
     <div>
@@ -20,7 +44,13 @@ return (
     <CarouselComponent/>
     
     </div>
-     <BoutonCard/>
+     <div  className="card-deck">
+          
+        <div className="row">
+    
+     {displayequipements()}
+     </div>
+     </div>
       <div className="footer">
           <FooterComponent/>
           <Button className="footer_boutonOption" href="./accessoires">

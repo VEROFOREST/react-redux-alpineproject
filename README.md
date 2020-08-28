@@ -66,3 +66,145 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+
+import bleulegende from '../images/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-1.jpg';
+import bleulegende2 from '../images/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-2.jpg';
+import bleulegende3 from '../images/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-3.jpg';
+import bleulegende4 from '../images/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-4.jpg';
+
+import bleupure from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_serac (1).jpg';
+import bleupure2 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_serac (2).jpg';
+import bleupure3 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_serac (3).jpg';
+import bleupure4 from '../images/configurateur/modele/pure/modele_pure-couleur_bleu-jante_serac (4).jpg';
+
+
+
+import blanclegende from '../images/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-1.jpg';
+import blanclegende2 from '../images/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-2.jpg';
+import blanclegende3 from '../images/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-3.jpg';
+import blanclegende4 from '../images/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-4.jpg';
+
+import blancpure from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_serac (1).jpg';
+import blancpure2 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_serac (2).jpg';
+import blancpure3 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_serac (3).jpg';
+import blancpure4 from '../images/configurateur/modele/pure/modele_pure-couleur_blanche-jante_serac (4).jpg';
+
+
+
+import noirlegende from '../images/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-1.jpg';
+import noirlegende2 from '../images/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-2.jpg';
+import noirlegende3 from '../images/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-3.jpg';
+import noirlegende4 from '../images/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-4.jpg';
+
+import noirpure from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (1).jpg';
+import noirpure2 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (2).jpg';
+import noirpure3 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (3).jpg';
+import noirpure4 from '../images/configurateur/modele/pure/modele_pure-couleur_noire-jante_serac (4).jpg';
+
+
+
+ const displayColorSelectionCards = () => {
+        
+        return Object.keys(couleursChoix).map(key => 
+            // return console.log(couleurChoix[key].key)
+        (
+       
+        <BoutonCard key={couleursChoix[key].key} couleur={couleursChoix[key]} />
+                
+        ));
+      }
+
+      pages couleurs
+      import React from 'react';
+import '../App.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../index.css';
+import FooterComponent from './footer';
+import Button from 'react-bootstrap/Button';
+import BoutonCard from './boutonCard';
+
+import CarouselComponent from './carousel';
+import {useSelector} from 'react-redux'
+
+
+const Couleurs = () => {
+
+  const  couleursChoix= useSelector((state)=> state.couleurs)
+
+  console.log(couleursChoix)
+
+     const displayColorSelectionCards = () => {
+        
+        return Object.keys(couleursChoix).map(key => 
+            // return console.log(couleurChoix[key].key)
+        (
+       
+        <BoutonCard key={couleursChoix[key].key} couleur={couleursChoix[key]} />
+                
+        ));
+      }
+    
+
+
+
+
+
+    return (
+      <div>
+
+        <CarouselComponent/>
+        {displayColorSelectionCards()}
+        <div className="footer">
+          <FooterComponent/>
+          <Button className="footer_boutonOption" href="./jantes">
+              <div className="footer_boutonContent">
+              <span className="footer_boutonContentSpan">Option suivante: Jantes</span>
+              </div>
+          </Button>
+          </div>
+
+      </div>
+    );
+
+}
+
+export default Couleurs;
+bouton card
+import React from 'react';
+import '../App.css';
+import BoutonCarousel from './boutonCarrousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../index.css';
+import FooterComponent from './footer';
+import Button from 'react-bootstrap/Button';
+import BoutonCard from './boutonCard';
+
+
+
+const Couleurs = () => {
+
+    return (
+      <div className="App">
+
+        <BoutonCarousel/>
+        <BoutonCard/>
+        <div className="footer">
+          <FooterComponent/>
+          <Button className="footer_boutonOption" href="./jantes">
+              <div className="footer_boutonContent">
+              <span className="footer_boutonContentSpan">Option suivante: Jantes</span>
+              </div>
+          </Button>
+
+        </div>
+
+      </div>
+    );
+
+}
+
+export default Couleurs;

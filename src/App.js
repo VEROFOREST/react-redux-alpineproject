@@ -9,6 +9,7 @@ import Sellerie from './components/sellerie';
 import Equipements from './components/equipements';
 import Accessoires from './components/accessoires';
 import Couleurs from './components/couleurs';
+import JantesList from './components/jantesList';
 
 
 const  App = () => {
@@ -21,9 +22,10 @@ const  App = () => {
           <Route exact path="/">
             <Version />
           </Route>
-          {/* <Route path="/couleurs">
+          <Route path="/couleurs">
             <Couleurs />
-          </Route> */}
+          </Route>
+         
           <Route path="/jantes">
             <Jantes />
           </Route>

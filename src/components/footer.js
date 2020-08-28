@@ -1,9 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 
 
 
 const FooterComponent = () => {
+    const prix = useSelector ((state) => state.price)
 
 
 return(

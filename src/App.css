@@ -50,7 +50,7 @@ body{
   justify-content: space-between;
   border-color:#0843a6;
   margin:0;
-  padding:0;
+  padding:auto 0;
   border:0;
   font-size:100%;
   box-sizing:border-box;
@@ -194,7 +194,7 @@ body{
 
 /* -----------------------------------------------------DEBUT--NAV---------------------------------------------------------- */
 .box{
-  margin:0;
+  margin-top:0;
   padding:0;
   display: flex;
   width:100%;
@@ -299,7 +299,9 @@ body{
 /* -----------------------------------------------------FIN--NAV---------------------------------------------------------- */
 
 /* -----------------------------------------------------DEBUT--CAROUSEL---------------------------------------------------------- */
-
+.carousel{
+  margin-top: 10%;
+}
 /* -----------------------------------------------------FIN--CAROUSEL---------------------------------------------------------- */
 
 /* -----------------------------------------------------DEBUT--boutonCard---------------------------------------------------------- */
@@ -312,9 +314,12 @@ body{
   justify-content:center;
  
 }
+
 .card {
   border: 1px solid white;
   background:transparent;
+  display: flex;
+  flex-direction: initial;
   transform:skew(-18deg);
   margin-top:-15px;
   width:200px;
@@ -322,5 +327,17 @@ body{
   box-sizing: border-box;
 
 }
+.card-body {
+ padding: 0%;
+} 
 
 /* -----------------------------------------------------FIN--boutonCard---------------------------------------------------------- */
+.version.btn {
+
+  margin-top: 40%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+
+
